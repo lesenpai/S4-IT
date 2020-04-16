@@ -1,6 +1,4 @@
-package s4_it.circular_bidirectional_list;
-
-import javax.print.attribute.standard.NumberOfDocuments;
+package s4_it.lab6.circular_bidirectional_list;
 
 /*
 * Циклический двунаправленный список
@@ -12,19 +10,22 @@ public class CircularBidirectionalList<T>
 
     public int size()
     {
-        if(_head == null)
+        if (_head == null)
             return 0;
+
         var current = _head;
         int i = 1;
-        for(; current.mNext != _head; i++)
+        for (; current.mNext != _head; i++)
+        {
             current = current.mNext;
+        }
         return i;
     }
 
     public void addFront(T value)
     {
         var node = new Node<>(value);
-        if(_head == null)
+        if (_head == null)
         {
             _head = node;
             _head.mPrev = _head;
@@ -43,14 +44,14 @@ public class CircularBidirectionalList<T>
 
     public void printReverse()
     {
-        if(_head == null)
+        if (_head == null)
             System.out.println("List is empty");
         else
         {
             var current = _head.mPrev;
             System.out.print(current.mValue + " ");
             current = current.mPrev;
-            while(current != _head.mPrev)
+            while (current != _head.mPrev)
             {
                 System.out.print(current.mValue + " ");
                 current = current.mPrev;
@@ -62,7 +63,7 @@ public class CircularBidirectionalList<T>
     public void addBack(T value)
     {
         var node = new Node<>(value);
-        if(_head == null)
+        if (_head == null)
         {
             _head = node;
             _head.mPrev = _head;
@@ -80,13 +81,15 @@ public class CircularBidirectionalList<T>
 
     public T at(int index) throws Exception
     {
-        if(index < 0 || index >= size())
+        if (index < 0 || index >= size())
             throw new IndexOutOfBoundsException();
+
         var current = _head;
-        for(int i = 0; ; i++)
+        for (int i = 0; ; i++)
         {
-            if(i == index)
+            if (i == index)
                 return current.mValue;
+
             current = current.mNext;
         }
     }

@@ -1,7 +1,7 @@
 package s4_it.lab6;
 import static java.lang.System.*;
 
-import s4_it.circular_bidirectional_list.CircularBidirectionalList;
+import s4_it.lab6.circular_bidirectional_list.CircularBidirectionalList;
 import s4_it.lab6.singly_linked_list.SinglyLinkedList;
 import s4_it.lab6.queue.Queue;
 import s4_it.lab6.stack.Stack;
