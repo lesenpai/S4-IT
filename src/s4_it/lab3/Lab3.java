@@ -29,15 +29,16 @@ public class Lab3
         out.println("\nПроизведение элементов в строках, не содержащих отрицательные элементы:");
         {
             int prod;
-            for(int pi = 0; pi < positive_rows_indexes.length; pi++)
+            for (int pi = 0; pi < positive_rows_indexes.length; pi++)
             {
                 prod = matrix[positive_rows_indexes[pi]][0];
-                for(int ii = 1; ii < matrix.length; ii++)
+                for (int ii = 1; ii < matrix.length; ii++)
                 {
                     prod *= matrix[positive_rows_indexes[pi]][ii];
                 }
                 out.print("#" + (positive_rows_indexes[pi] + 1) + ": " + prod);
-                if(pi != positive_rows_indexes.length - 1) out.print(", ");
+                if (pi != positive_rows_indexes.length - 1)
+                    out.print(", ");
             }
             out.println();
         }
@@ -46,12 +47,10 @@ public class Lab3
         out.print("\nМаксимум среди сумм элементов диагоналей, параллельных главной диагонали матрицы: ");
         Integer[] keys = diagonal_sums.keySet().toArray(new Integer[0]);
         int max = keys[0];
-        for(int i = 1; i < diagonal_sums.size(); i++)
+        for (int i = 1; i < diagonal_sums.size(); i++)
         {
             if (keys[i] > max)
-            {
                 max = keys[i];
-            }
         }
         out.print(max + " " + Arrays.toString(diagonal_sums.get(max)));
         out.println();
@@ -64,9 +63,9 @@ public class Lab3
         // с mtx[0][Y] до mtx[0][1], mtx[1][0] до mtx[X][0]
         int sum = 0;
         // нижняя часть
-        for(int r = mtx.length - 1; r > 0; r--)
+        for (int r = mtx.length - 1; r > 0; r--)
         {
-            for(int cr = r, cc = 0; cr < mtx.length; cr++, cc++)
+            for (int cr = r, cc = 0; cr < mtx.length; cr++, cc++)
             {
                 sum += mtx[cr][cc];
             }
@@ -74,9 +73,9 @@ public class Lab3
             sum = 0;
         }
         // верхняя часть
-        for(int c = 1; c < mtx.length; c++)
+        for (int c = 1; c < mtx.length; c++)
         {
-            for(int cr = 0, cc = c; cc < mtx.length; cr++, cc++)
+            for (int cr = 0, cc = c; cc < mtx.length; cr++, cc++)
             {
                 sum += mtx[cr][cc];
             }
@@ -89,15 +88,15 @@ public class Lab3
     public static Integer[] PositiveRowsIndexes(Integer[][] m)
     {
         ArrayList<Integer> al = new ArrayList<>();
-        for(int r = 0; r < m.length; r++)
+        for (int r = 0; r < m.length; r++)
         {
-            for(int c = 0; c < m.length; c++)
+            for (int c = 0; c < m.length; c++)
             {
-                if(m[c][r] < 0)
-                {
+                if (m[c][r] < 0)
                     break;
-                }
-                if(c == m.length - 1) al.add(r);
+
+                if (c == m.length - 1)
+                    al.add(r);
             }
         }
         return al.toArray(new Integer[0]);
@@ -106,9 +105,9 @@ public class Lab3
     public static Integer[][] SquareMatrix(int size, int minItemSize, int maxItemSize)
     {
         Integer[][] m = new Integer[size][size];
-        for(int r = 0; r < size; r++)
+        for (int r = 0; r < size; r++)
         {
-            for(int c = 0; c < size; c++)
+            for (int c = 0; c < size; c++)
             {
                 m[r][c] = CustomUtils.Random(minItemSize, maxItemSize);
             }
@@ -118,9 +117,9 @@ public class Lab3
 
     public static void PrintMatrix(Integer[][] m)
     {
-        for(int r = 0; r < m.length; r++)
+        for (int r = 0; r < m.length; r++)
         {
-            for(int c = 0; c < m.length; c++)
+            for (int c = 0; c < m.length; c++)
             {
                 out.print("#[" + r + "][" + c + "] " + m[r][c] + '\t');
             }
