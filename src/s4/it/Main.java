@@ -22,9 +22,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Lab9Part3.main(null);
-        if(true) return;
-
         CustomUtils.PrintInFrame("S4. IT. Lab Manager");
         String labs_list_info = "Labs codes list: 1, 2, 3, 4, " +
                                 "5-1-c-S, 5-1-c-SB, 5-1-ui, " +
