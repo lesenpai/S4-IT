@@ -75,7 +75,8 @@ public class Lab9Part3Model
             }
             catch (Exception e)
             {
-                View.ErrorAlert("Неудалось сохранить файл");return false;
+                View.ErrorAlert("Неудалось сохранить файл");
+                return false;
             }
         }
 
