@@ -1,6 +1,5 @@
 package s4.it.lab9.Part3;
 
-import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -85,12 +84,6 @@ public class Lab9Part3Model
 
     public void Exit(String text)
     {
-        /*
-            if !IsFileSaved
-                if  NeedSafe // View.AskForSave.Result
-                    save()
-            window.close()
-         */
         if(!IsFIleSaved)
         {
             var responce = View.AskForSave();
@@ -106,7 +99,7 @@ public class Lab9Part3Model
                 }
                 else
                 {
-                    return;
+                    View.Exit();
                 }
             }
         }
