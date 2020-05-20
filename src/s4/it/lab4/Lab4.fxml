@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="831.0" prefWidth="1117.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="s4.it.lab4.Lab4Controller">
+   <children>
+      <TextArea fx:id="_taDescription" editable="false" layoutX="14.0" layoutY="14.0" prefHeight="354.0" prefWidth="308.0" AnchorPane.bottomAnchor="341.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <TabPane layoutX="319.0" layoutY="5.0" prefHeight="690.0" prefWidth="584.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="319.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+        <tabs>
+          <Tab fx:id="_tab1n2" onSelectionChanged="#Tab_SelectionChanged" text="Lab 1.2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="661.0" prefWidth="469.0">
+                        <TextField fx:id="_l1n2TfXMin" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="38.0" />
+                        <TextField fx:id="_l1n2TfXMax" layoutX="113.0" layoutY="14.0" prefHeight="25.0" prefWidth="38.0" />
+                        <Label layoutX="59.0" layoutY="18.0" text="&lt;= x &lt;=" />
+                        <Label layoutX="16.0" layoutY="53.0" text="dx" />
+                        <TextField fx:id="_l1n2TfDeltaX" layoutX="37.0" layoutY="49.0" prefHeight="25.0" prefWidth="44.0" />
+                        <Button fx:id="_l1n2BtnCalculate" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#L1n2BtnCalculate_Action" prefHeight="25.0" prefWidth="76.0" text="Посчитать" />
+                        <TableView fx:id="_l1n2TvTable" layoutX="14.0" layoutY="146.0" prefHeight="501.0" prefWidth="425.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="155.0" />
+                        <Label fx:id="_l1n2LblErrorMessage" layoutX="105.0" layoutY="91.0" text="&lt;error message&gt;" textFill="#a83636" wrapText="true" />
+                  </AnchorPane>
+            </content>
+          </Tab>
+           <Tab fx:id="_tab1n1" onSelectionChanged="#Tab_SelectionChanged" text="Lab 1.1">
+              <content>
+                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <TextField fx:id="_l1n1TfXMin" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="38.0" />
+                    <TextField fx:id="_l1n1TfXMax" layoutX="113.0" layoutY="14.0" prefHeight="25.0" prefWidth="38.0" />
+                    <Label layoutX="59.0" layoutY="18.0" text="&lt;= x &lt;=" />
+                    <Label layoutX="16.0" layoutY="53.0" text="dx" />
+                    <TextField fx:id="_l1n1TfDeltaX" layoutX="37.0" layoutY="49.0" prefHeight="25.0" prefWidth="44.0" />
+                    <Button fx:id="_l1n1BtnCalculate" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#L1n1BtnCalculate_Action" prefHeight="25.0" prefWidth="76.0" text="Посчитать" />
+                    <TableView fx:id="_l1n1TvTable" layoutX="14.0" layoutY="146.0" prefHeight="501.0" prefWidth="425.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="155.0" />
+                    <Label fx:id="_l1n1LblErrorMessage" layoutX="105.0" layoutY="91.0" text="&lt;error message&gt;" textFill="#a83636" wrapText="true" />
+                 </AnchorPane>
+              </content>
+           </Tab>
+            <Tab fx:id="_tab2n1" onSelectionChanged="#Tab_SelectionChanged" text="Lab 2.1">
+               <content>
+                  <AnchorPane prefHeight="786.0" prefWidth="793.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="25.0" text="Размер массивов" />
+                        <TextField fx:id="_l2TfArraySize" layoutX="118.0" layoutY="21.0" prefHeight="25.0" prefWidth="53.0" />
+                        <Button fx:id="_l2BtnGenerateArrays" layoutX="14.0" layoutY="58.0" mnemonicParsing="false" onAction="#L2BtnGenerateArrays_Action" prefHeight="25.0" prefWidth="177.0" text="Сгенерировать массивы" />
+                        <TextArea fx:id="_l2TaArray2Source" layoutX="15.0" layoutY="208.0" prefHeight="65.0" prefWidth="769.0" wrapText="true" />
+                        <Button fx:id="_l2BtnGo" layoutX="15.0" layoutY="312.0" mnemonicParsing="false" onAction="#L2BtnGo_Action" prefHeight="25.0" prefWidth="112.0" text="Go" />
+                        <TextArea fx:id="_l2TaArray1Source" layoutX="15.0" layoutY="113.0" prefHeight="72.0" prefWidth="771.0" wrapText="true" />
+                        <Label layoutX="15.0" layoutY="96.0" text="Массив 1" />
+                        <Label layoutX="15.0" layoutY="191.0" text="Массив 2" />
+                        <Label layoutX="63.0" layoutY="284.0" text="Элемент для поиска" />
+                        <TextField fx:id="_l2TfRequiredElement" layoutX="181.0" layoutY="280.0" prefHeight="25.0" prefWidth="53.0" />
+                        <TextArea fx:id="_l2TaArray1Sorted" editable="false" layoutX="16.0" layoutY="418.0" prefHeight="72.0" prefWidth="771.0" wrapText="true" />
+                        <Label layoutX="72.0" layoutY="394.0" text="Отсортирован" />
+                        <Label layoutX="15.0" layoutY="346.0" text="Массив 1: Результат поиска:" />
+                        <Label fx:id="_l2LblArray1SearchResult" layoutX="181.0" layoutY="346.0" text="&lt;search result&gt;" />
+                        <TextArea fx:id="_l2TaArray2Sorted" editable="false" layoutX="16.0" layoutY="575.0" prefHeight="72.0" prefWidth="771.0" wrapText="true" />
+                        <Label layoutX="72.0" layoutY="526.0" text="Отсортирован" />
+                        <Label layoutX="72.0" layoutY="550.0" text="Результат поиска:" />
+                        <Label fx:id="_l2LblArray2SearchResult" layoutX="181.0" layoutY="550.0" text="&lt;search result&gt;" />
+                        <Label layoutX="20.0" layoutY="658.0" text="Слияние: массив 1 + массив 2" />
+                        <TextArea fx:id="_l2TaMergedArray" editable="false" layoutX="16.0" layoutY="683.0" prefHeight="102.0" prefWidth="771.0" wrapText="true" />
+                        <Label layoutX="72.0" layoutY="370.0" text="Максимальный элемент: " />
+                        <Label fx:id="_l2LblArray1SearchMaxResult" layoutX="225.0" layoutY="370.0" text="&lt;search max result&gt;" />
+                        <Label fx:id="_l2LblGenerateArraysErrorMessage" layoutX="197.0" layoutY="62.0" text="&lt;error message&gt;" textFill="#d74141" />
+                        <Label fx:id="_l2LblGoErrorMessage" layoutX="133.0" layoutY="316.0" text="&lt;error message&gt;" textFill="#d74141" />
+                        <ToggleButton fx:id="_l2TglRequiredItem" layoutX="14.0" layoutY="280.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="44.0" selected="true" />
+                        <Label layoutX="17.0" layoutY="501.0" text="Массив 2: Максимаьный элемент:" />
+                        <Label fx:id="_l2LblArray2SearchMaxResult" layoutX="211.0" layoutY="501.0" text="&lt;search max result&gt;" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="_tab3" onSelectionChanged="#Tab_SelectionChanged" text="Lab 3">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="_l3TfMatrixSize" layoutX="117.0" layoutY="10.0" prefHeight="25.0" prefWidth="66.0" />
+                        <Label layoutX="14.0" layoutY="14.0" text="Размер матрицы" />
+                        <TextArea fx:id="_l3TaMatrix" layoutX="12.0" layoutY="67.0" prefHeight="355.0" prefWidth="364.0">
+                           <font>
+                              <Font name="Lucida Console" size="14.0" />
+                           </font></TextArea>
+                        <Label layoutX="14.0" layoutY="50.0" text="Матрица" />
+                        <Label layoutX="15.0" layoutY="454.0" text="Строки, не содержащие отрицательные элементы" />
+                        <TextField fx:id="_l3TfFPLIndexes" editable="false" layoutX="301.0" layoutY="450.0" prefHeight="25.0" prefWidth="212.0" />
+                        <Label layoutX="50.0" layoutY="487.0" text="Произведения их элементов" />
+                        <TextField fx:id="_l3TfFPLItemsProducts" editable="false" layoutX="217.0" layoutY="483.0" prefHeight="25.0" prefWidth="336.0" />
+                        <TextArea fx:id="_l3TaDPMDMSInfo" editable="false" layoutX="15.0" layoutY="516.0" prefHeight="82.0" prefWidth="649.0" promptText="&lt;from diagonals parallel to main: diagonal with max sum&gt;" wrapText="true" />
+                        <Button fx:id="_l3BtnGenerate" layoutX="198.0" layoutY="10.0" mnemonicParsing="false" onAction="#L3BtnGenerate_Action" prefHeight="17.0" prefWidth="126.0" text="Создать матрицу" />
+                        <Label fx:id="_l3LblGenerateErrorMessage" layoutX="339.0" layoutY="14.0" text="&lt;error message&gt;" textFill="#b53d3d" />
+                        <Button fx:id="_l3BtnGo" layoutX="397.0" layoutY="67.0" mnemonicParsing="false" onAction="#L3BtnGo_Action" prefHeight="27.0" prefWidth="101.0" text="Go" />
+                        <Label fx:id="_l3LblGoErrorMessage" layoutX="507.0" layoutY="72.0" text="&lt;error message&gt;" textFill="#b53d3d" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
